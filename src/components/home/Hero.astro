@@ -1,0 +1,156 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "../../assets/images/hero/hero-topografia.jpg";
+---
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+
+      <span class="hero-tag">
+        Ingeniería • Construcción • Topografía
+      </span>
+
+      <h1>
+        Construimos soluciones de ingeniería para el desarrollo de Bolivia.
+      </h1>
+
+      <p>
+        En EUROLATINA LTDA. desarrollamos proyectos de Ingeniería Civil,
+        Topografía y Agropecuaria con altos estándares de calidad,
+        tecnología y experiencia.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="/proyectos" class="btn-primary">
+          Ver proyectos
+        </a>
+
+        <a
+          href="https://wa.me/59167210906"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-secondary">
+
+          Solicitar cotización
+
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+
+      <Image
+        src={heroImage}
+        alt="Topografía EUROLATINA"
+        widths={[600, 900, 1200]}
+        sizes="(max-width: 900px) 100vw, 50vw"
+        loading="eager"
+        class="hero-photo"
+      />
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+.hero{
+  padding:5rem 0;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
+  align-items:center;
+}
+
+.hero-tag{
+  display:inline-block;
+  padding:.55rem 1rem;
+  background:#eef5fc;
+  color:var(--color-primary);
+  border-radius:999px;
+  font-weight:600;
+  margin-bottom:1rem;
+}
+
+.hero h1{
+  font-family:"Poppins",sans-serif;
+  font-size:3.2rem;
+  line-height:1.1;
+  margin-bottom:1.5rem;
+}
+
+.hero p{
+  font-size:1.1rem;
+  color:var(--color-text-light);
+  margin-bottom:2rem;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:1rem;
+}
+
+.btn-primary{
+  background:var(--color-primary);
+  color:#fff;
+  padding:1rem 2rem;
+  border-radius:999px;
+  font-weight:600;
+  transition:var(--transition);
+}
+
+.btn-primary:hover{
+  background:var(--color-primary-dark);
+}
+
+.btn-secondary{
+  border:2px solid var(--color-primary);
+  color:var(--color-primary);
+  padding:1rem 2rem;
+  border-radius:999px;
+  font-weight:600;
+  transition:var(--transition);
+}
+
+.btn-secondary:hover{
+  background:var(--color-primary);
+  color:#fff;
+}
+
+.hero-photo{
+  width:100%;
+  height:600px;
+  object-fit:cover;
+  object-position:20% center;
+  border-radius:22px;
+  box-shadow:var(--shadow-md);
+}
+
+@media (max-width:900px){
+
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:2.3rem;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+}
+
+</style>

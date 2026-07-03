@@ -1,0 +1,151 @@
+---
+import { site } from "../../config/site";
+
+const menu = [
+  { name: "Inicio", href: "/" },
+  { name: "Nosotros", href: "/nosotros" },
+  { name: "Servicios", href: "/servicios" },
+  { name: "Proyectos", href: "/proyectos" },
+  { name: "Contacto", href: "/contacto" },
+];
+---
+
+<header class="header">
+
+  <div class="container header-container">
+
+    <a href="/" class="logo">
+      {site.company.name}
+    </a>
+
+    <nav>
+
+      <ul class="menu">
+
+        {
+          menu.map((item) => (
+            <li>
+              <a href={item.href}>{item.name}</a>
+            </li>
+          ))
+        }
+
+      </ul>
+
+    </nav>
+
+    <a
+      class="btn-whatsapp"
+      href={`https://wa.me/${site.company.whatsapp}`}
+      target="_blank"
+      rel="noopener noreferrer">
+
+      WhatsApp
+
+    </a>
+
+  </div>
+
+</header>
+
+<style>
+
+.header{
+
+background:white;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+box-shadow:var(--shadow-sm);
+
+}
+
+.header-container{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+height:80px;
+
+}
+
+.logo{
+
+font-family:"Poppins",sans-serif;
+
+font-size:1.35rem;
+
+font-weight:700;
+
+color:var(--color-primary);
+
+}
+
+.menu{
+
+display:flex;
+
+gap:2rem;
+
+}
+
+.menu a{
+
+font-weight:500;
+
+transition:var(--transition);
+
+}
+
+.menu a:hover{
+
+color:var(--color-primary);
+
+}
+
+.btn-whatsapp{
+
+background:var(--color-primary);
+
+color:white;
+
+padding:.8rem 1.4rem;
+
+border-radius:999px;
+
+transition:var(--transition);
+
+font-weight:600;
+
+}
+
+.btn-whatsapp:hover{
+
+background:var(--color-primary-dark);
+
+}
+
+@media(max-width:900px){
+
+.menu{
+
+display:none;
+
+}
+
+.btn-whatsapp{
+
+display:none;
+
+}
+
+}
+
+</style>

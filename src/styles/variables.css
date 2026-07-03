@@ -1,0 +1,27 @@
+:root {
+  /* Colores corporativos */
+  --color-primary: #0B4F8C;
+  --color-primary-dark: #08345D;
+  --color-secondary: #F59E0B;
+
+  /* Fondos */
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+
+  /* Texto */
+  --color-text: #1F2937;
+  --color-text-light: #6B7280;
+
+  /* Layout */
+  --container: 1280px;
+
+  /* Bordes */
+  --radius: 14px;
+
+  /* Sombras */
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  /* Transiciones */
+  --transition: all .3s ease;
+}
